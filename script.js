@@ -43,34 +43,34 @@ const posts = [
       id: 2,
       nomeAutore: 'Leonardo Da Vinci',
       fotoAutore: 'img/klimt.jpg',
-      data: '12-22-2022', 
+      data: '12-15-2022', 
       testo: 'Per essere dei grandi leader è necessario diventare studiosi del successo e il miglior modo che conosco è quello di conoscere la storia e la biografia degli uomini che già hanno avuto successo. Così la loro esperienza diventa la mia esperienza.',
       immagine: 'img/notte-stellata.jpg',
-      likes: '800',
+      likes: '590',
     }, {
       id: 3,
       nomeAutore: 'George Washington',
       fotoAutore: 'img/urlo.jpg',
-      data: '12-22-2022', 
+      data: '12-03-2022', 
       testo: 'Per essere dei grandi leader è necessario diventare studiosi del successo e il miglior modo che conosco è quello di conoscere la storia e la biografia degli uomini che già hanno avuto successo. Così la loro esperienza diventa la mia esperienza.',
       immagine: 'img/parchetto-vintage.jpg',
-      likes: '800',
+      likes: '222',
     }, {
       id: 4,
       nomeAutore: 'Alessandro Magno',
       fotoAutore: 'img/dalì.jpg',
-      data: '12-22-2022', 
+      data: '11-20-2022', 
       testo: 'Per essere dei grandi leader è necessario diventare studiosi del successo e il miglior modo che conosco è quello di conoscere la storia e la biografia degli uomini che già hanno avuto successo. Così la loro esperienza diventa la mia esperienza.',
-      immagine: 'img/guernica.jpg',
-      likes: '800',
+      immagine: 'img/nascita-venere.jpg',
+      likes: '164',
     }, {
       id: 5,
       nomeAutore: 'Adolf Hitler',
       fotoAutore: 'img/goya.jpg',
-      data: '12-22-2022', 
+      data: '07-12-2020', 
       testo: 'Per essere dei grandi leader è necessario diventare studiosi del successo e il miglior modo che conosco è quello di conoscere la storia e la biografia degli uomini che già hanno avuto successo. Così la loro esperienza diventa la mia esperienza.',
-      immagine: 'img/nascita-venere.jpg',
-      likes: '800',
+      immagine: 'img/guernica.jpg',
+      likes: '13',
     }
   ];
 
@@ -84,29 +84,29 @@ for (let post of posts){
   <div class="post__header">
     <div class="post-meta">
       <div class="post-meta__icon">
-        <img class="profile-pic" src="${posts.fotoAutore}" alt="${posts.nomeAutore}">
+        <img class="profile-pic" src="${post.fotoAutore}" alt="${post.nomeAutore}">
       </div>
       <div class="post-meta__data">
-        <div class="post-meta__author">${posts.nomeAutore}</div>
-        <div class="post-meta__time">${posts.data}</div>
+        <div class="post-meta__author">${post.nomeAutore}</div>
+        <div class="post-meta__time">${post.data}</div>
       </div>
     </div>
   </div>
   <div class="post__text">
-  ${posts.testo}
+  ${post.testo}
   </div>
   <div class="post__image">
-    <img src="${posts.immagine}" alt="${posts.nomeAutore}">
+    <img src="${post.immagine}" alt="${post.nomeAutore}">
   </div>
   <div class="post__footer">
     <div class="likes js-likes">
       <div class="likes__cta">
-        <button class="like-button js-like-button" href="#" data-postid="${posts.id}">
+        <button class="like-button js-like-button" href="#" data-postid="${post.id}">
           <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
           <span class="like-button__label">Mi Piace</span>
         </button>
       </div>
-      <div class="likes__counter">Piace a <b id="like-counter-1" class="js-likes-counter">alt="${posts.likes}"</b> persone</div>
+      <div class="likes__counter">Piace a <b id="like-counter-1" class="js-likes-counter">${post.likes}</b> persone</div>
     </div>
   </div>
 </div>
