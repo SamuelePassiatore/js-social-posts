@@ -27,6 +27,7 @@ Se clicchiamo sul tasto "Mi Piace" cambiamo il colore al testo del bottone e inc
 // ! OPERAZIONI PRELIMINARI
 // Prendo gli elementi dal DOM
 const container = document.getElementById('container');
+const likeButtons = document.getElementById('button');
 
 // ! SVOLGIMENTO
 // Creo un array di oggetti
@@ -106,12 +107,14 @@ for (let post of posts){
           <span class="like-button__label">Mi Piace</span>
         </button>
       </div>
-      <div class="likes__counter">Piace a <b id="like-counter-1" class="js-likes-counter">${post.likes}</b> persone</div>
+      <div class="likes__counter">Piace a <b id="like-counter-${post.id}" class="js-likes-counter">${post.likes}</b> persone</div>
     </div>
   </div>
-</div>
-    `;
+  </div>
+  `;
 }
 
 // Stampo in pagina
  container.innerHTML = content;
+
+ 
