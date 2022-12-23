@@ -27,7 +27,6 @@ Se clicchiamo sul tasto "Mi Piace" cambiamo il colore al testo del bottone e inc
 // ! OPERAZIONI PRELIMINARI
 // Prendo gli elementi dal DOM
 const container = document.getElementById('container');
-const likeButtons = document.getElementById('button');
 
 // ! SVOLGIMENTO
 // Creo un array di oggetti
@@ -115,6 +114,37 @@ for (let post of posts){
 }
 
 // Stampo in pagina
- container.innerHTML = content;
+container.innerHTML = content;
 
- 
+
+// Variabile iniziale
+let isClicked = false;
+
+// Prendo elemento dal DOM
+const likeButton = document.querySelectorAll('.like-button.js-like-button');
+
+// Cambio colore del bottone
+likeButton.forEach ((button,i) => button.addEventListener('click', () =>{
+    isClicked = !isClicked;
+    if(isClicked){
+        button.classList.add('like-button--liked');
+    }
+    else{
+        button.classList.remove('like-button--liked');   
+    }
+    return;
+}));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
