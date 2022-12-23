@@ -121,17 +121,22 @@ container.innerHTML = content;
 let isClicked = false;
 
 // Prendo elemento dal DOM
-const likeButton = document.querySelectorAll('.like-button.js-like-button');
+const likeButton = document.querySelectorAll('.like-button');
 
 // Cambio colore del bottone
 likeButton.forEach ((button,i) => button.addEventListener('click', () =>{
+    const likeCounter = document.getElementById(`like-counter-${i+1}`);
     isClicked = !isClicked;
+    let changeLike = posts[i].likes;
     if(isClicked){
         button.classList.add('like-button--liked');
+        changeLike++;
     }
     else{
-        button.classList.remove('like-button--liked');   
+        button.classList.remove('like-button--liked'); 
+        changeLike[i];  
     }
+    likeCounter.innerText = changeLike;
     return;
 }));
 
