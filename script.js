@@ -35,7 +35,7 @@ const posts = [
       id: 1,
       nomeAutore: 'Napoleone Bonaparte',
       fotoAutore: 'img/gioconda.jpg',
-      data: '12-22-2022', 
+      data: new Date('12-22-2022'), 
       testo: 'Per essere dei grandi leader è necessario diventare studiosi del successo e il miglior modo che conosco è quello di conoscere la storia e la biografia degli uomini che già hanno avuto successo. Così la loro esperienza diventa la mia esperienza.',
       immagine: 'img/cappella-sistina.jpg',
       likes: '800',
@@ -43,7 +43,7 @@ const posts = [
       id: 2,
       nomeAutore: 'Leonardo Da Vinci',
       fotoAutore: 'img/klimt.jpg',
-      data: '12-15-2022', 
+      data: new Date('12-15-2022'), 
       testo: 'Per essere dei grandi leader è necessario diventare studiosi del successo e il miglior modo che conosco è quello di conoscere la storia e la biografia degli uomini che già hanno avuto successo. Così la loro esperienza diventa la mia esperienza.',
       immagine: 'img/notte-stellata.jpg',
       likes: '590',
@@ -51,7 +51,7 @@ const posts = [
       id: 3,
       nomeAutore: 'George Washington',
       fotoAutore: 'img/urlo.jpg',
-      data: '12-03-2022', 
+      data: new Date('12-03-2022'), 
       testo: 'Per essere dei grandi leader è necessario diventare studiosi del successo e il miglior modo che conosco è quello di conoscere la storia e la biografia degli uomini che già hanno avuto successo. Così la loro esperienza diventa la mia esperienza.',
       immagine: 'img/parchetto-vintage.jpg',
       likes: '222',
@@ -59,7 +59,7 @@ const posts = [
       id: 4,
       nomeAutore: 'Alessandro Magno',
       fotoAutore: 'img/dalì.jpg',
-      data: '11-20-2022', 
+      data: new Date('11-20-2022'), 
       testo: 'Per essere dei grandi leader è necessario diventare studiosi del successo e il miglior modo che conosco è quello di conoscere la storia e la biografia degli uomini che già hanno avuto successo. Così la loro esperienza diventa la mia esperienza.',
       immagine: 'img/nascita-venere.jpg',
       likes: '164',
@@ -67,7 +67,7 @@ const posts = [
       id: 5,
       nomeAutore: 'Adolf Hitler',
       fotoAutore: 'img/goya.jpg',
-      data: '07-12-2020', 
+      data: new Date('07-12-2020'), 
       testo: 'Per essere dei grandi leader è necessario diventare studiosi del successo e il miglior modo che conosco è quello di conoscere la storia e la biografia degli uomini che già hanno avuto successo. Così la loro esperienza diventa la mia esperienza.',
       immagine: 'img/guernica.jpg',
       likes: '13',
@@ -88,7 +88,7 @@ for (let post of posts){
       </div>
       <div class="post-meta__data">
         <div class="post-meta__author">${post.nomeAutore}</div>
-        <div class="post-meta__time">${post.data}</div>
+        <div class="post-meta__time">${post.data.toLocaleDateString()}</div>
       </div>
     </div>
   </div>
